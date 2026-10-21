@@ -1,0 +1,6 @@
+streamlit
+fastapi
+uvicorn[standard]
+pymysql
+python-dotenv
+pydantic

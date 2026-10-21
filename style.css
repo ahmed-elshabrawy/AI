@@ -1,0 +1,1191 @@
+/* =========================================================
+   GENERAL
+   ========================================================= */
+
+html,
+body,
+.stApp {
+    direction: rtl !important;
+    background: #f7f9fc !important;
+}
+
+body,
+.stApp,
+.stApp * {
+    color: #000 !important;
+}
+
+/* =========================================================
+   HEADER / FOOTER
+   ========================================================= */
+
+header {
+    visibility: visible !important;
+    background: transparent !important;
+}
+
+footer {
+    visibility: hidden !important;
+}
+
+
+/* إظهار زر فتح الـ Sidebar */
+
+button[data-testid="stExpandSidebarButton"] {
+    visibility: visible !important;
+    display: flex !important;
+}
+
+div[data-testid="stSidebarCollapsedControl"] {
+    visibility: visible !important;
+    display: flex !important;
+}
+
+button[data-testid="collapsedControl"] {
+    visibility: visible !important;
+    display: flex !important;
+}
+
+
+/* =========================================================
+   MAIN CONTAINER
+   ========================================================= */
+
+[data-testid="stMainBlockContainer"] {
+    padding-top: 1rem !important;
+    padding-bottom: 150px !important;
+    padding-left: 2% !important;
+    padding-right: 2% !important;
+}
+
+
+/* =========================================================
+   SIDEBAR
+   ========================================================= */
+
+section[data-testid="stSidebar"] {
+    position: fixed !important;
+
+    top: 0 !important;
+    right: 0 !important;
+    left: auto !important;
+
+    width: 230px !important;
+    min-width: 230px !important;
+    max-width: 230px !important;
+
+    height: 100vh !important;
+
+    background: #ffffff !important;
+
+    z-index: 999999 !important;
+
+    transition: transform 0.25s ease !important;
+}
+
+
+/* =========================================================
+   SIDEBAR CLOSED
+   ========================================================= */
+
+/*
+   لما الـ Sidebar يكون مقفول
+   نخليه خارج الشاشة ناحية اليمين
+*/
+
+section[data-testid="stSidebar"][aria-expanded="false"] {
+    transform: translateX(100%) !important;
+}
+
+
+/* =========================================================
+   SIDEBAR OPEN
+   ========================================================= */
+
+section[data-testid="stSidebar"][aria-expanded="true"] {
+    transform: translateX(0) !important;
+}
+
+
+/* =========================================================
+   SIDEBAR CONTENT
+   ========================================================= */
+
+.sidebar-brand {
+    text-align: center;
+
+    font-size: 25px;
+
+    font-weight: 800;
+
+    margin: 15px 0 10px;
+}
+
+.sidebar-subtitle {
+    text-align: center;
+
+    font-size: 15px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   SIDEBAR BUTTONS
+   ========================================================= */
+
+section[data-testid="stSidebar"] button {
+    width: calc(100% - 20px) !important;
+
+    margin: 5px 10px !important;
+
+    min-height: 48px !important;
+
+    box-sizing: border-box !important;
+
+    border-radius: 12px !important;
+
+    background: #2BA4C8 !important;
+
+    color: #ffffff !important;
+
+    border: none !important;
+}
+
+
+/* =========================================================
+   SIDEBAR CLOSE BUTTON
+   ========================================================= */
+
+[data-testid="stSidebarCollapseButton"] {
+    position: absolute !important;
+
+    left: 10px !important;
+    top: 10px !important;
+
+    z-index: 1000000 !important;
+}
+
+
+/* قلب اتجاه السهم */
+
+[data-testid="stSidebarCollapseButton"]
+[data-testid="stIconMaterial"] {
+    transform: scaleX(-1) !important;
+}
+
+
+/* =========================================================
+   SIDEBAR OPEN BUTTON
+   ========================================================= */
+
+div[data-testid="stSidebarCollapsedControl"] {
+    position: fixed !important;
+
+    right: 15px !important;
+    top: 50% !important;
+
+    transform: translateY(-50%) !important;
+
+    z-index: 9999999 !important;
+}
+
+
+/* شكل زر الفتح */
+
+div[data-testid="stSidebarCollapsedControl"] button {
+    width: 50px !important;
+    height: 50px !important;
+
+    border-radius: 14px !important;
+
+    background: #2BA4C8 !important;
+
+    border: none !important;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15) !important;
+}
+
+
+/* أيقونة زر الفتح */
+
+div[data-testid="stSidebarCollapsedControl"]
+[data-testid="stIconMaterial"] {
+    color: #ffffff !important;
+
+    font-size: 25px !important;
+}
+
+
+/* =========================================================
+   LOGO
+   ========================================================= */
+
+.logo-circle {
+    width: 90px;
+    height: 90px;
+
+    margin: 0 auto 8px;
+
+    border-radius: 50%;
+
+    background: #ffffff;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 52px;
+
+    box-shadow:
+        0 0 25px rgba(43, 164, 200, 0.25);
+}
+
+
+/* =========================================================
+   MAIN TITLE
+   ========================================================= */
+
+.main-title {
+    text-align: center;
+
+    font-size: 48px;
+
+    font-weight: 800;
+
+    margin: 10px 0 5px;
+}
+
+.main-subtitle {
+    text-align: center;
+
+    font-size: 17px;
+
+    margin-bottom: 35px;
+}
+
+
+/* =========================================================
+   QUESTION / ANSWER TITLES
+   ========================================================= */
+
+.question-title,
+.answer-title,
+.loading-right {
+    width: 96% !important;
+
+    margin-left: 2% !important;
+    margin-right: 2% !important;
+
+    box-sizing: border-box !important;
+
+    direction: rtl !important;
+
+    text-align: right !important;
+}
+
+.question-title,
+.answer-title {
+    font-size: 24px;
+
+    font-weight: 800;
+
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+}
+
+
+/* =========================================================
+   QUESTION / ANSWER BOXES
+   ========================================================= */
+
+.question-box,
+.answer-box {
+    width: 96% !important;
+
+    margin-left: 2% !important;
+    margin-right: 2% !important;
+
+    box-sizing: border-box !important;
+
+    background: #def4fe !important;
+
+    border: 1px solid #bfe8f5 !important;
+
+    border-radius: 16px !important;
+
+    padding: 14px 20px !important;
+
+    font-size: 18px !important;
+
+    line-height: 1.9 !important;
+
+    direction: rtl !important;
+
+    text-align: right !important;
+
+    overflow-wrap: anywhere !important;
+}
+
+
+/* Answer Scroll */
+
+.answer-box {
+    max-height: 400px;
+
+    overflow-y: auto;
+}
+
+
+/* =========================================================
+   TEXT INPUT
+   ========================================================= */
+
+[data-testid="stTextInput"] {
+    position: fixed !important;
+
+    bottom: 130px !important;
+
+    left: 2% !important;
+    right: 2% !important;
+
+    width: auto !important;
+
+    z-index: 9999 !important;
+
+    background: transparent !important;
+}
+
+
+/* Input Field */
+
+[data-testid="stTextInput"] input {
+    width: 100% !important;
+
+    background: #ffffff !important;
+
+    color: #000000 !important;
+
+    border: none !important;
+
+    outline: none !important;
+
+    border-radius: 14px !important;
+
+    padding: 14px 18px !important;
+
+    font-size: 17px !important;
+
+    direction: rtl !important;
+
+    text-align: right !important;
+}
+
+
+/* إخفاء التعليمات */
+
+[data-testid="InputInstructions"] {
+    display: none !important;
+}
+
+
+/* =========================================================
+   MAIN BUTTONS
+   ========================================================= */
+
+[data-testid="stMainBlockContainer"]
+button[kind="primary"],
+[data-testid="stMainBlockContainer"]
+button[kind="secondary"] {
+
+    position: fixed !important;
+
+    bottom: 65px !important;
+
+    width: 47% !important;
+
+    min-height: 52px !important;
+
+    border: none !important;
+
+    border-radius: 14px !important;
+
+    z-index: 10000 !important;
+
+    font-size: 17px !important;
+
+    font-weight: 700 !important;
+
+    color: #ffffff !important;
+}
+
+
+/* =========================================================
+   ASK BUTTON
+   ========================================================= */
+
+[data-testid="stMainBlockContainer"]
+button[kind="primary"] {
+
+    left: 2% !important;
+
+    background: #2BA4C8 !important;
+}
+
+
+/* =========================================================
+   NEW CHAT BUTTON
+   ========================================================= */
+
+[data-testid="stMainBlockContainer"]
+button[kind="secondary"] {
+
+    right: 2% !important;
+
+    background: #C72BBE !important;
+}
+
+
+/* =========================================================
+   WHEN SIDEBAR IS OPEN
+   ========================================================= */
+
+
+/* Input */
+
+body:has(
+    section[data-testid="stSidebar"][aria-expanded="true"]
+)
+[data-testid="stTextInput"] {
+
+    left: 2% !important;
+
+    right: calc(2% + 230px) !important;
+}
+
+
+/* Question / Answer */
+
+body:has(
+    section[data-testid="stSidebar"][aria-expanded="true"]
+)
+.question-title,
+
+body:has(
+    section[data-testid="stSidebar"][aria-expanded="true"]
+)
+.answer-title,
+
+body:has(
+    section[data-testid="stSidebar"][aria-expanded="true"]
+)
+.question-box,
+
+body:has(
+    section[data-testid="stSidebar"][aria-expanded="true"]
+)
+.answer-box {
+
+    width: auto !important;
+
+    margin-left: 2% !important;
+
+    margin-right: calc(2% + 230px) !important;
+}
+
+
+/* Ask Button */
+
+body:has(
+    section[data-testid="stSidebar"][aria-expanded="true"]
+)
+[data-testid="stMainBlockContainer"]
+button[kind="primary"] {
+
+    left: 2% !important;
+
+    width: calc(
+        (100% - 230px - 6%) / 2
+    ) !important;
+}
+
+
+/* New Chat Button */
+
+body:has(
+    section[data-testid="stSidebar"][aria-expanded="true"]
+)
+[data-testid="stMainBlockContainer"]
+button[kind="secondary"] {
+
+    right: calc(2% + 230px) !important;
+
+    width: calc(
+        (100% - 230px - 6%) / 2
+    ) !important;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    section[data-testid="stSidebar"] {
+
+        width: 280px !important;
+
+        min-width: 280px !important;
+
+        max-width: 280px !important;
+    }
+
+
+    /* Sidebar مفتوح */
+
+    section[data-testid="stSidebar"][aria-expanded="true"] {
+        transform: translateX(0) !important;
+    }
+
+
+    /* Sidebar مقفول */
+
+    section[data-testid="stSidebar"][aria-expanded="false"] {
+        transform: translateX(100%) !important;
+    }
+
+
+    /* Input */
+
+    [data-testid="stTextInput"] {
+
+        left: 2% !important;
+
+        right: 2% !important;
+    }
+
+
+    /* الأزرار */
+
+    [data-testid="stMainBlockContainer"]
+    button[kind="primary"],
+    [data-testid="stMainBlockContainer"]
+    button[kind="secondary"] {
+
+        width: 47% !important;
+    }
+
+
+    /* Input عند فتح Sidebar */
+
+    body:has(
+        section[data-testid="stSidebar"][aria-expanded="true"]
+    )
+    [data-testid="stTextInput"] {
+
+        left: 2% !important;
+
+        right: calc(2% + 280px) !important;
+    }
+
+
+    /* المحتوى عند فتح Sidebar */
+
+    body:has(
+        section[data-testid="stSidebar"][aria-expanded="true"]
+    )
+    .question-title,
+
+    body:has(
+        section[data-testid="stSidebar"][aria-expanded="true"]
+    )
+    .answer-title,
+
+    body:has(
+        section[data-testid="stSidebar"][aria-expanded="true"]
+    )
+    .question-box,
+
+    body:has(
+        section[data-testid="stSidebar"][aria-expanded="true"]
+    )
+    .answer-box {
+
+        margin-right: calc(2% + 280px) !important;
+    }
+}
+
+/* =========================================================
+   SIDEBAR OPEN BUTTON - FIX
+   ========================================================= */
+
+/* الزر في إصدارات Streamlit الحديثة */
+div[data-testid="stSidebarCollapsedControl"] {
+    display: flex !important;
+
+    position: fixed !important;
+
+    right: 15px !important;
+    top: 50% !important;
+
+    transform: translateY(-50%) !important;
+
+    width: 50px !important;
+    height: 50px !important;
+
+    z-index: 9999999 !important;
+}
+
+
+/* الزر نفسه */
+
+div[data-testid="stSidebarCollapsedControl"] button {
+    display: flex !important;
+
+    width: 50px !important;
+    height: 50px !important;
+
+    align-items: center !important;
+    justify-content: center !important;
+
+    border-radius: 14px !important;
+
+    background: #2BA4C8 !important;
+
+    border: none !important;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15) !important;
+}
+
+
+/* الأيقونة */
+
+div[data-testid="stSidebarCollapsedControl"]
+[data-testid="stIconMaterial"] {
+
+    display: block !important;
+
+    color: #ffffff !important;
+
+    font-size: 25px !important;
+}
+
+
+/* =========================================================
+   OLD STREAMLIT SIDEBAR BUTTON
+   ========================================================= */
+
+button[data-testid="collapsedControl"] {
+
+    display: flex !important;
+
+    position: fixed !important;
+
+    right: 15px !important;
+    top: 50% !important;
+
+    transform: translateY(-50%) !important;
+
+    width: 50px !important;
+    height: 50px !important;
+
+    align-items: center !important;
+    justify-content: center !important;
+
+    z-index: 9999999 !important;
+
+    border-radius: 14px !important;
+
+    background: #2BA4C8 !important;
+
+    border: none !important;
+}
+
+
+/* =========================================================
+   FORCE BUTTON VISIBILITY WHEN SIDEBAR IS CLOSED
+   ========================================================= */
+
+section[data-testid="stSidebar"][aria-expanded="false"]
+~ div[data-testid="stSidebarCollapsedControl"] {
+
+    display: flex !important;
+}
+
+/* =========================================================
+   SIDEBAR OPEN BUTTON - FINAL
+   ========================================================= */
+
+button[data-testid="stExpandSidebarButton"],
+div[data-testid="stSidebarCollapsedControl"],
+button[data-testid="collapsedControl"] {
+    position: fixed !important;
+
+    right: 15px !important;
+    top: 50% !important;
+
+    transform: translateY(-50%) !important;
+
+    z-index: 99999999 !important;
+
+    visibility: visible !important;
+}
+
+
+/* شكل الزر */
+
+button[data-testid="stExpandSidebarButton"],
+div[data-testid="stSidebarCollapsedControl"] button,
+button[data-testid="collapsedControl"] {
+
+    width: 50px !important;
+    height: 50px !important;
+
+    min-width: 50px !important;
+    min-height: 50px !important;
+
+    display: flex !important;
+
+    align-items: center !important;
+    justify-content: center !important;
+
+    border-radius: 14px !important;
+
+    background: #2BA4C8 !important;
+
+    border: none !important;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15) !important;
+
+    visibility: visible !important;
+}
+
+
+/* الأيقونة */
+
+button[data-testid="stExpandSidebarButton"]
+[data-testid="stIconMaterial"],
+div[data-testid="stSidebarCollapsedControl"]
+[data-testid="stIconMaterial"],
+button[data-testid="collapsedControl"]
+[data-testid="stIconMaterial"] {
+
+    visibility: visible !important;
+
+    display: block !important;
+
+    color: #ffffff !important;
+
+    font-size: 25px !important;
+}
+
+/* =========================================================
+   TOP BAR - DEPLOY + MENU
+   ========================================================= */
+
+/* إظهار الـ Header */
+header[data-testid="stHeader"] {
+    visibility: visible !important;
+    display: block !important;
+
+    background: transparent !important;
+}
+
+
+/* Toolbar بالكامل في أعلى الشمال */
+[data-testid="stToolbar"] {
+    visibility: visible !important;
+    display: flex !important;
+
+    position: fixed !important;
+
+    top: 10px !important;
+    left: 15px !important;
+    right: auto !important;
+
+    width: auto !important;
+    height: 50px !important;
+
+    z-index: 999999999 !important;
+
+    direction: ltr !important;
+}
+
+
+/* محتوى الـ Toolbar */
+[data-testid="stToolbar"] > div {
+    display: flex !important;
+
+    align-items: center !important;
+    justify-content: flex-start !important;
+
+}
+
+
+/* Deploy والثلاث نقط */
+[data-testid="stToolbar"] button,
+[data-testid="stToolbar"] [role="button"] {
+    visibility: visible !important;
+}
+
+
+/* =========================================================
+   SIDEBAR OPEN BUTTON
+   ========================================================= */
+
+div[data-testid="stSidebarCollapsedControl"] {
+    position: fixed !important;
+
+    top: 10px !important;
+    right: 15px !important;
+    left: auto !important;
+
+    transform: none !important;
+
+    width: 50px !important;
+    height: 50px !important;
+
+    z-index: 999999999 !important;
+
+    visibility: visible !important;
+    display: flex !important;
+}
+
+
+/* شكل زر فتح الـ Sidebar */
+div[data-testid="stSidebarCollapsedControl"] button {
+    width: 50px !important;
+    height: 50px !important;
+
+    min-width: 50px !important;
+    min-height: 50px !important;
+
+    display: flex !important;
+
+    align-items: center !important;
+    justify-content: center !important;
+
+    border-radius: 14px !important;
+
+    background: #2BA4C8 !important;
+
+    border: none !important;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15) !important;
+}
+
+
+/* أيقونة فتح الـ Sidebar */
+div[data-testid="stSidebarCollapsedControl"]
+[data-testid="stIconMaterial"] {
+    color: #ffffff !important;
+
+    font-size: 25px !important;
+}
+
+/* =========================================================
+   DEPLOY + MENU - أقصى الشمال
+   ========================================================= */
+
+[data-testid="stToolbar"] {
+    position: fixed !important;
+
+    top: 10px !important;
+    left: 0px !important;
+    right: auto !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    z-index: 999999999 !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+
+    direction: ltr !important;
+}
+
+
+/* تقليل المسافة الداخلية */
+
+[data-testid="stToolbar"] > div {
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+}
+
+
+/* Deploy */
+
+[data-testid="stToolbar"] button {
+    margin-left: 0 !important;
+}
+
+
+/* =========================================================
+   زر فتح الـ Sidebar - أقصى اليمين
+   ========================================================= */
+
+div[data-testid="stSidebarCollapsedControl"] {
+    position: fixed !important;
+
+    top: 10px !important;
+    right: 15px !important;
+    left: auto !important;
+
+    transform: none !important;
+
+    z-index: 999999999 !important;
+}
+
+/* =========================================================
+   تحريك Deploy والثلاث نقط لأقصى الشمال
+   ========================================================= */
+
+header[data-testid="stHeader"] {
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+}
+
+[data-testid="stToolbar"] {
+    position: fixed !important;
+
+    top: 10px !important;
+    left: -170px !important;
+
+    right: auto !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    transform: none !important;
+
+    z-index: 999999999 !important;
+
+    display: flex !important;
+
+    direction: ltr !important;
+}
+
+
+/* إلغاء أي مسافة داخلية */
+
+[data-testid="stToolbar"] > div {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+
+[data-testid="stToolbar"] button,
+[data-testid="stToolbar"] [role="button"] {
+    margin: 0 !important;
+    padding: 0 8px !important;
+}
+
+/* تثبيت التلات نقط في مكانها */
+[data-testid="stMainMenu"] {
+    position: fixed !important;
+    top: 10px !important;
+    left: 15px !important;
+    z-index: 1000000000 !important;
+}
+
+/* تحريك Deploy فقط */
+[data-testid="stAppDeployButton"] {
+    position: fixed !important;
+    top: 10px !important;
+    left: 55px !important;
+    z-index: 1000000001 !important;
+}
+
+/* =========================================================
+   SIDEBAR BUTTON - TOP BESIDE DEPLOY
+   ========================================================= */
+
+header[data-testid="stHeader"] button[data-testid="stExpandSidebarButton"] {
+    position: fixed !important;
+
+    top: 10px !important;
+    left: 150px !important;
+    right: auto !important;
+
+    transform: none !important;
+
+    width: 50px !important;
+    height: 50px !important;
+
+    z-index: 9999999999 !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    visibility: visible !important;
+}
+
+/* زر فتح الـSidebar أعلى اليمين */
+
+header[data-testid="stHeader"] button[data-testid="stExpandSidebarButton"] {
+    position: fixed !important;
+
+    top: 10px !important;
+    right: 15px !important;
+    left: auto !important;
+
+    transform: none !important;
+
+    width: 50px !important;
+    height: 50px !important;
+
+    z-index: 9999999999 !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    visibility: visible !important;
+}
+
+/* عكس اتجاه علامة فتح الـSidebar */
+
+button[data-testid="stExpandSidebarButton"] [data-testid="stIconMaterial"] {
+    transform: scaleX(-1) !important;
+}
+
+/* تأثير الشادو عند الوقوف على الأزرار */
+.stButton > button:hover,
+button[kind="secondary"]:hover,
+button[kind="primary"]:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25) !important;
+    transform: translateY(-2px) !important;
+    transition: all 0.25s ease-in-out !important;
+}
+
+/* الحركة الناعمة */
+.stButton > button {
+    transition: box-shadow 0.25s ease-in-out,
+                transform 0.25s ease-in-out !important;
+}
+
+/* الإطار الخارجي لصندوق الكتابة */
+div[data-testid="stTextInputRootElement"] {
+    border: 1px solid #000000 !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+/* عند الضغط أو الكتابة داخل الصندوق */
+div[data-testid="stTextInputRootElement"]:focus-within {
+    border: 1px solid #000000 !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+/* إلغاء أي لون أحمر من العنصر الداخلي */
+div[data-testid="stTextInputRootElement"] > div {
+    border-color: #000000 !important;
+    box-shadow: none !important;
+}
+
+/* إظهار كلمة Ask Me داخل صندوق الكتابة */
+div[data-testid="stTextInput"] input::placeholder {
+    color: #000000 !important;
+    -webkit-text-fill-color: #000000 !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* خط فاصل بين العنوان والشاتات القديمة */
+[data-testid="stSidebar"] hr {
+    display: block !important;
+    border: none !important;
+    border-top: 1px solid #D9DDE3 !important;
+    margin: 25px 0 15px 0 !important;
+    width: 100% !important;
+}
+
+/* عنوان الشاتات القديمة في أقصى اليمين */
+[data-testid="stSidebar"] h1,
+[data-testid="stSidebar"] h2,
+[data-testid="stSidebar"] h3,
+[data-testid="stSidebar"] p {
+    text-align: right !important;
+    direction: rtl !important;
+}
+
+/* ضبط محاذاة عنوان الشاتات القديمة */
+[data-testid="stSidebar"] [data-testid="stMarkdownContainer"] {
+    text-align: right !important;
+    direction: rtl !important;
+}
+
+/* إخفاء Ask Me بمجرد الضغط على صندوق الكتابة */
+div[data-testid="stTextInput"] input:focus::placeholder {
+    color: transparent !important;
+    -webkit-text-fill-color: transparent !important;
+    opacity: 0 !important;
+}
+
+/* توحيد عرض صندوق السؤال والإجابة مع صندوق الكتابة والزرارين */
+.question-box,
+.answer-box {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+/* توحيد المساحة الخارجية */
+div[data-testid="stMainBlockContainer"] {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+}
+
+/* محاذاة عنوان السؤال مع بداية صندوق السؤال */
+.question-box h1,
+.question-box h2,
+.question-box h3,
+.question-title {
+    text-align: right !important;
+    direction: rtl !important;
+    margin-right: 0 !important;
+    padding-right: 0 !important;
+}
+
+/* محاذاة عنوان الإجابة مع بداية صندوق الإجابة */
+.answer-box h1,
+.answer-box h2,
+.answer-box h3,
+.answer-title {
+    text-align: right !important;
+    direction: rtl !important;
+    margin-right: 0 !important;
+    padding-right: 0 !important;
+}
+
+/* توحيد بداية ونهاية عناوين السؤال والإجابة مع الصناديق */
+.question-title,
+.answer-title {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 10px 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+    direction: rtl !important;
+    text-align: right !important;
+}
+
+/* توحيد عرض صندوق السؤال والإجابة */
+.question-box,
+.answer-box {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    box-sizing: border-box !important;
+}
